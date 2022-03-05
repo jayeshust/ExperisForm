@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+    
+    flex-direction: column;
+   
+    background-color: #ffffff;
+    margin: 0% 10%;
+    height: 73vh;
+   
+    padding: 0% 5%;
+    //overflow-y: auto
+    overflow-y: auto;
+    font-size: 12px;
+    
+    
+}
+.text-section{
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column;
+}
+
+.font-bold{
+    font-size: 15px;
+    font-weight: bold
+}
+.flex1{
+    display: flex;
+    flex: 1;
+}
+.flex2{
+    display: flex;
+    flex: 2;
+}
+.flex1-column{
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+.common-input{
+    height: 30px;
+    margin: 0px 25px 0px 0px;
+   
+}
+.margin-right{
+    margin: 0px 25px 0px 0px;
+}
+input, label {
+    display:block;
+}
+.required-field::after {
+    content: "*";
+    color: red;
+}
+.required-front::before {
+    content: "*";
+    color: red;
+}
+.textAreaSection{
+    width: calc(100% - 30px);
+    height: 70px;
+}

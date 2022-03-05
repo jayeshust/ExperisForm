@@ -1,0 +1,27 @@
+.footer{
+    background-color: black;
+    position:absolute;
+    height: 10vh;
+    bottom: 0;
+    width:100%;
+    color:#ffffff;
+    font-size: 9px;
+  }
+  .container{
+    display: flex;
+    
+    flex-direction: column;
+    padding: 0% 10%;
+    justify-content: center;
+    width: 80%
+   
+}
+.logo{
+  
+    display: flex;
+    padding: 10px;
+    height: 32px;
+}
+.footerText{
+  
+}

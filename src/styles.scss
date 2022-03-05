@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color: #faf5f1;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.common-margin-top{
+    margin-top: 7px
+}
+.common-margin{
+    margin: 7px
+}
+.common-margin-right{
+    margin-right: 9px
+}
+.row-section{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.is-invalid{
+    border: 1px solid red;
+}
+.red-text{
+    color: red;
+}
