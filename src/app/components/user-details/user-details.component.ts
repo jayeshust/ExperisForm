@@ -11,7 +11,6 @@ export class UserDetailsComponent implements OnInit {
   userDetailFormGroup :any;
   submitted=false;
   textAreaValue = '';
-  maxLength=100;
   constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {

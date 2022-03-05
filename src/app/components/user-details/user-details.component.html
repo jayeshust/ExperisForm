@@ -1,185 +1,145 @@
-<div class="container"  >
-  <div >
+<div class="container">
+  <div>
 
 
     <div class="text-section">
-       <span>Just fill in your details below, and the details of who you are nomination</span>
-       <span>Then tell us 100 words why </span>
+      <span>Just fill in your details below, and the details of who you are nomination</span>
+      <span>Then tell us 100 words why </span>
     </div>
-    <div class="row-section common-margin-top" >
-       <div class="font-bold flex1">YOURDETAILS</div>
-       <div class="font-bold flex1">COMMUNITY GROUP DETAILS</div>
+    <div class="row-section common-margin-top">
+      <div class="font-bold flex1">YOURDETAILS</div>
+      <div class="font-bold flex1">COMMUNITY GROUP DETAILS</div>
     </div>
     <form [formGroup]="userDetailFormGroup" (ngSubmit)="save()">
-       <div class="row-section common-margin-top ">
-          <div class="form-group formContainer flex1-column ">
-             <label for="firstName" class="required-field">First Name </label>
-             <input
-                type="text"
-                formControlName="firstName"
-                class="form-control common-input "
-                [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
-                placeholder=""
-                />
-             <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                <div *ngIf="f.firstName.errors.required" class="red-text">
-                   Please complete the required fields
-                </div>
-                <div
-                   *ngIf="!f.firstName.errors.required && f.firstName.errors.pattern"
-                   class="red-text" >
-                   Name Allow only alphabets
-                </div>
-             </div>
+      <div class="row-section common-margin-top ">
+        <div class="form-group formContainer flex1-column ">
+          <label for="firstName" class="required-field">First Name </label>
+          <input type="text" formControlName="firstName" class="form-control common-input " [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+            placeholder="" />
+          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required" class="red-text">
+              Please complete the required fields
+            </div>
+            <div *ngIf="!f.firstName.errors.required && f.firstName.errors.pattern" class="red-text">
+              Name Allow only alphabets
+            </div>
           </div>
-          <div class="form-group formContainer flex1-column">
-             <label for="groupName" class="required-field">Group or Individual Name</label>
-             <input
-                type="text"
-                formControlName="groupName"
-                class="form-control common-input"
-                [ngClass]="{ 'is-invalid': submitted && f.groupName.errors }"
-                placeholder=""
-                />
-             <div *ngIf="submitted && f.groupName.errors" class="invalid-feedback">
-                <div *ngIf="f.groupName.errors.required" class="red-text">
-                   Please complete the required fields
-                </div>
-                <div
-                   *ngIf="!f.groupName.errors.required && f.groupName.errors.pattern"
-                   class="red-text">
-                   Name Allow only alphabets
-                </div>
-             </div>
+        </div>
+        <div class="form-group formContainer flex1-column">
+          <label for="groupName" class="required-field">Group or Individual Name</label>
+          <input type="text" formControlName="groupName" class="form-control common-input" [ngClass]="{ 'is-invalid': submitted && f.groupName.errors }"
+            placeholder="" />
+          <div *ngIf="submitted && f.groupName.errors" class="invalid-feedback">
+            <div *ngIf="f.groupName.errors.required" class="red-text">
+              Please complete the required fields
+            </div>
+            <div *ngIf="!f.groupName.errors.required && f.groupName.errors.pattern" class="red-text">
+              Name Allow only alphabets
+            </div>
           </div>
-       </div>
-       <div class="row-section common-margin-top ">
-          <div class="form-group formContainer flex1-column ">
-             <label for="email" class="required-field">Email address </label>
-             <input
-                type="text"
-                formControlName="email"
-                class="form-control common-input "
-                [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
-                placeholder="abc@gmail.com"
-                />
-             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required" class="red-text">
-                   Please complete the required fields
-                </div>
-                <div
-                   *ngIf="!f.email.errors.required && f.email.errors.pattern"
-                   class="red-text" >
-                  Please enter your email in format : example@gmail.com
-                </div>
-             </div>
+        </div>
+      </div>
+      <div class="row-section common-margin-top ">
+        <div class="form-group formContainer flex1-column ">
+          <label for="email" class="required-field">Email address </label>
+          <input type="text" formControlName="email" class="form-control common-input " [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+            placeholder="abc@gmail.com" />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required" class="red-text">
+              Please complete the required fields
+            </div>
+            <div *ngIf="!f.email.errors.required && f.email.errors.pattern" class="red-text">
+              Please enter your email in format : example@gmail.com
+            </div>
           </div>
-          <div class="form-group formContainer flex1-column">
-             <label for="contactPerson" class="required-field">Contact Person</label>
-             <input
-                type="text"
-                formControlName="contactPerson"
-                class="form-control common-input"
-                [ngClass]="{ 'is-invalid': submitted && f.contactPerson.errors }"
-                placeholder=""
-                />
-             <div *ngIf="submitted && f.contactPerson.errors" class="invalid-feedback">
-                <div *ngIf="f.contactPerson.errors.required" class="red-text">
-                   Please complete the required fields
-                </div>
-                <div
-                   *ngIf="!f.contactPerson.errors.required && f.contactPerson.errors.pattern"
-                   class="red-text" >
-                   Name Allow only alphabets
-                </div>
-             </div>
+        </div>
+        <div class="form-group formContainer flex1-column">
+          <label for="contactPerson" class="required-field">Contact Person</label>
+          <input type="text" formControlName="contactPerson" class="form-control common-input" [ngClass]="{ 'is-invalid': submitted && f.contactPerson.errors }"
+            placeholder="" />
+          <div *ngIf="submitted && f.contactPerson.errors" class="invalid-feedback">
+            <div *ngIf="f.contactPerson.errors.required" class="red-text">
+              Please complete the required fields
+            </div>
+            <div *ngIf="!f.contactPerson.errors.required && f.contactPerson.errors.pattern" class="red-text">
+              Name Allow only alphabets
+            </div>
           </div>
-       </div>
-       <div style="display:flex;flex-direction:column;">
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;">
 
-      
-       <div class="row-section common-margin-top ">
+
+        <div class="row-section common-margin-top ">
           <div class="form-group formContainer flex1-column ">
-             <label for="firstName" class="required-field">Phone Number </label>
-             <div style="display:flex;flex-direction:row;flex:1">
-                <select class="form-control flex1 margin-right"  formControlName="" >
-                   <option value="default">--  select  --</option>
-                   <option >61</option>
-                </select>
-                <input
-                   type="text"
-                   formControlName="mobile1"
-                   class="form-control common-input flex2"
-                   mobileMask
-                   [ngClass]="{ 'is-invalid': submitted && f.mobile1.errors }"
-                   placeholder="(999)-999-99999"
-                   (input)="numbersOnlyValidator($event)"
-                   />
-               
-             </div>
-             <div *ngIf="submitted && f.mobile1.errors" class="invalid-feedback">
-                <div *ngIf="f.mobile1.errors.required" class="red-text">
-                   Please complete the required fields
-                </div>
-                <div
-                   *ngIf="!f.mobile1.errors.required && f.mobile1.errors.pattern"
-                   class="red-text">
-                  phone pattern wrong
-                </div>
-             </div>
+            <label for="firstName" class="required-field">Phone Number </label>
+            <div style="display:flex;flex-direction:row;flex:1">
+              <select class="form-control flex1 margin-right" formControlName="">
+                <option value="default">-- select --</option>
+                <option>61</option>
+              </select>
+              <input type="text" formControlName="mobile1" class="form-control common-input flex2" mobileMask [ngClass]="{ 'is-invalid': submitted && f.mobile1.errors }"
+                placeholder="(999)-999-99999" (input)="numbersOnlyValidator($event)" />
+
+            </div>
+            <div *ngIf="submitted && f.mobile1.errors" class="invalid-feedback">
+              <div *ngIf="f.mobile1.errors.required" class="red-text">
+                Please complete the required fields
+              </div>
+              <div *ngIf="!f.mobile1.errors.required && f.mobile1.errors.pattern" class="red-text">
+                phone pattern wrong
+              </div>
+            </div>
           </div>
           <div class="form-group formContainer flex1-column ">
-             <label for="firstName" >Phone Number </label>
-             <div style="display:flex;flex-direction:row;flex:1">
-                <select class="form-control flex1 margin-right"   >
-                   <option value="default">--  select  --</option>
-                   <option >61</option>
-                </select>
-                <input
-                   type="text"
-                   formControlName="mobile2"
-                   class="form-control common-input flex2"
-                   [ngClass]="{ 'is-invalid': submitted && f.mobile2.errors }"
-                   placeholder=""
-                   />
-                
-             </div>
+            <label for="firstName">Phone Number </label>
+            <div style="display:flex;flex-direction:row;flex:1">
+              <select class="form-control flex1 margin-right">
+                <option value="default">-- select --</option>
+                <option>61</option>
+              </select>
+              <input type="text" formControlName="mobile2" class="form-control common-input flex2" [ngClass]="{ 'is-invalid': submitted && f.mobile2.errors }"
+                placeholder="" />
+
+            </div>
           </div>
-       </div>
-       
-       </div>
-       <div class="text-section">
-          <span class="required-field">Why are you nominating them?</span>
-       </div>
-       <div >
-          <textarea  class="textAreaSection" [ngClass]="{ 'is-invalid': submitted && f.reason.errors }" type="text" style="background-color:white;color:black; " 
-             formControlName="reason"  maxlength="maxLength" >                             
+        </div>
+
+      </div>
+      <div class="text-section">
+        <span class="required-field">Why are you nominating them?</span>
+      </div>
+      <div>
+        <textarea class="textAreaSection" [ngClass]="{ 'is-invalid': submitted && f.reason.errors }" type="text" style="background-color:white;color:black; "
+          formControlName="reason" maxlength="100" minlength="0">                             
           </textarea>
-          <label class="nopadding clrlbl" style="float:right;margin-right: 20px;"> {{f.reason.value.length}}/{{maxLength}}</label>
-          <div *ngIf="submitted && f.reason.errors" class="invalid-feedback">
-              <div *ngIf="f.reason.errors.required" class="red-text">
-                 Please complete the required fields
-              </div>
-              <div
-                 *ngIf="!f.reason.errors.required && f.reason.errors.pattern"
-                 class="red-text" >
-                 Name Allow only alphabets
-              </div>
-           </div>
-       </div>
-       <div class="row-section common-margin-top ">
-          <mat-checkbox class=" flex2 example-margin" color="primary">I accept the full prize draw <span style="text-decoration: underline;cursor:pointer;">Terms and Conditions</span></mat-checkbox>
-          <div class="flex1 required-front" style="justify-content: flex-end;margin-right: 20px">Required</div>
-       </div>
-       <div style="margin-top:15px">
-          <div>You concent collecting your information for the purposes of administring this promotion.
-             Westpac will only use this data in
+        <label class="nopadding clrlbl" style="float:right;margin-right: 20px;"> {{f.reason.value.length}}/100</label>
+        <div *ngIf="submitted && f.reason.errors" class="invalid-feedback">
+          <div *ngIf="f.reason.errors.required" class="red-text">
+            Please complete the required fields
           </div>
-          <div> accordance with our  <span style="text-decoration: underline;cursor:pointer;">Privacy Ploicy</span></div>
-       </div>
-       <div class="row-section common-margin-top">
-          <button mat-raised-button color="warn" (click)="submitDetails()">Submit nomination</button>
-       </div>
+          <div *ngIf="!f.reason.errors.required && f.reason.errors.pattern" class="red-text">
+            Name Allow only alphabets
+          </div>
+        </div>
+      </div>
+      <div class="row-section common-margin-top ">
+        <mat-checkbox class=" flex2 example-margin" color="primary">I accept the full prize draw
+          <span style="text-decoration: underline;cursor:pointer;">Terms and Conditions</span>
+        </mat-checkbox>
+        <div class="flex1 required-front" style="justify-content: flex-end;margin-right: 20px">Required</div>
+      </div>
+      <div style="margin-top:15px">
+        <div>You concent collecting your information for the purposes of administring this promotion. Westpac will only use this
+          data in
+        </div>
+        <div> accordance with our
+          <span style="text-decoration: underline;cursor:pointer;">Privacy Ploicy</span>
+        </div>
+      </div>
+      <div class="row-section common-margin-top">
+        <button mat-raised-button color="warn" (click)="submitDetails()">Submit nomination</button>
+      </div>
     </form>
   </div>
- </div>
+</div>
